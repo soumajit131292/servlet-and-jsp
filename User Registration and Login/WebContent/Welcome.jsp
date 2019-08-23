@@ -8,16 +8,23 @@
 </head>
 <body>
 	<%
-		String email = null;
+	
+	
+		
 		if (request.getSession().getAttribute("email") == null) {
+			
+			session.invalidate();			
 			response.sendRedirect("Login.jsp");
 		}
 	%>
-	Welcome !!
+	 Welcome !!
+	 
+	 
 	<form action="<%=request.getContextPath()%>/LpgoutController"
 		method="get">
 		<input type="hidden" name="action" value="destroy"> <input
 			type="submit" name="logout" value="Log out">
+			
 	</form>
 </body>
 </html>

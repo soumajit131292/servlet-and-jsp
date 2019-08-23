@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+
 	<form action="<%=request.getContextPath()%>/Login" method="post">
 		First Name:<input type="text" name="firstname" placeholder="firstname"
 			required> Email:<input type="email" name="email"

@@ -1,8 +1,5 @@
 package com.bridgelabz.service;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import com.bridgelabz.model.Userdetails;
 
 
@@ -11,6 +8,6 @@ import com.bridgelabz.model.Userdetails;
 public interface RegistrationLoginIntr {
 
 	public int doRegister(Userdetails user);
-	public void doLogin(String email,String firstname,HttpServletRequest request,HttpServletResponse response);
+	public int doLogin(String email,String firstname);
 	
 }

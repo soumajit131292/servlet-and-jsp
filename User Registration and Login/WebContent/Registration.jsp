@@ -8,12 +8,12 @@
 </head>
 <body>
 	<form action="<%=request.getContextPath()%>/Controllers" method="post">
-		First Name:<input type="text" name="firstname" placeholder="firstname">
-		Last Name:<input type="text" name="lastname" placeholder="lastname">
-		Email:<input type="email" name="email" placeholder="emil">
-		Password:<input type="password" name="password" placeholder="password">
-		Mobile Number:<input type="number" name="mobilenumber"
-			placeholder="mobile number"> <input type="submit"
+		First Name:<input type="text" name="firstname" placeholder="firstname" required>
+		Last Name:<input type="text" name="lastname" placeholder="lastname" required>
+		Email:<input type="email" name="email" placeholder="emil" required>
+		Password:<input type="password" name="password" placeholder="password" required>
+		Mobile Number:<input type="textbox" name="mobilenumber"
+			placeholder="mobile number" required> <input type="submit"
 			value="submit">
 	</form>
 </body>

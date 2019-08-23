@@ -1,9 +1,5 @@
 package com.bridgelabz.service;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
 import com.bridgelabz.model.DataAccessObject;
 import com.bridgelabz.model.Userdetails;
 
@@ -23,7 +19,7 @@ public class RgistrationLoginImpl implements RegistrationLoginIntr {
 		return execute;
 	}
 
-	public void doLogin(String email, String firstname, HttpServletRequest request, HttpServletResponse response)
+	public int doLogin(String email, String firstname)
 
 	{
 
@@ -31,22 +27,15 @@ public class RgistrationLoginImpl implements RegistrationLoginIntr {
 
 			int execute = accessdata.Login(email, firstname);
 			if (execute == 1) {
+				return 1;
 
-				request.getSession().invalidate();
-				HttpSession newsession = request.getSession(true);
-				newsession.setAttribute("email", email);
-				newsession.setMaxInactiveInterval(20);
-				response.sendRedirect("Welcome.jsp");
-            }
-			else
-			{
-				response.sendRedirect("Error.jsp");
 			}
 
 		} catch (Exception e) {
 
 			e.printStackTrace();
 		}
+		return 0;
 
 	}
 
