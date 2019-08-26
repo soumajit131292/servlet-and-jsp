@@ -9,7 +9,7 @@
 <body>
 
 
-	<form action="<%=request.getContextPath()%>/Login" method="post">
+	<form action="Login" method="post">
 		First Name:<input type="text" name="firstname" placeholder="firstname"
 			required> Email:<input type="email" name="email"
 			placeholder="email" required> <input type="submit"

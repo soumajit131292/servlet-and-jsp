@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="<%=request.getContextPath()%>/Controllers" method="post">
+	<form action="Controllers" method="post">
 		First Name:<input type="text" name="firstname" placeholder="firstname" required>
 		Last Name:<input type="text" name="lastname" placeholder="lastname" required>
 		Email:<input type="email" name="email" placeholder="emil" required>

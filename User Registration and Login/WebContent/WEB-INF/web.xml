@@ -6,6 +6,31 @@
 	<display-name>User Registration and Login</display-name>
 	<welcome-file-list>
 		<welcome-file>Login.jsp</welcome-file>
-
 	</welcome-file-list>
+	<servlet>
+		<servlet-name>UserLogin</servlet-name>
+		<servlet-class>/LoginController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserLogin</servlet-name>
+		<url-pattern>/LoginUser</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UserRegistration</servlet-name>
+		<servlet-class>/User Registration and
+			Login/src/com/bridgelabz/controller/RegistrationControllers.java</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserRegistration</servlet-name>
+		<url-pattern>/RegisterUser</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UserLogout</servlet-name>
+		<servlet-class>/User Registration and
+			Login/src/com/bridgelabz/controller/RegistrationControllers.java</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserLogout</servlet-name>
+		<url-pattern>/LogoutUser</url-pattern>
+	</servlet-mapping>
 </web-app>
