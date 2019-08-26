@@ -19,6 +19,7 @@ public class LpgoutController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
+		
 		request.getSession().invalidate();
 		Cookie[] cookies=request.getCookies();
 		for(Cookie cookie : cookies)
@@ -33,8 +34,10 @@ public class LpgoutController extends HttpServlet {
 				cookie.setMaxAge(0);
 				response.addCookie(cookie);
 				}
+	
 		}
-		
+//RequestDispatcher rd=request.getRequestDispatcher("Login.jsp");
+//rd.forward(request, response);
 		System.out.println("in log out page");
 		response.sendRedirect("Login.jsp");
 

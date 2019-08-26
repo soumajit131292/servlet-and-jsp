@@ -2,6 +2,7 @@ package com.bridgelabz.controller;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -30,6 +31,10 @@ public class RegistrationControllers extends HttpServlet {
 		String password = request.getParameter("password");
         Userdetails user = new Userdetails(firstname, lastname, email, mobilenumber, password);
 		object.doRegister(user);
+
+	//	RequestDispatcher rd=request.getRequestDispatcher("successfulresigiteration.jsp");
+		//rd.forward(request, response);
+
 		response.sendRedirect("successfulresigiteration.jsp");
 
 	}

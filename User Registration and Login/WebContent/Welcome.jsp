@@ -6,6 +6,9 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+<%
+response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+%>
 <body>
 
 	<%

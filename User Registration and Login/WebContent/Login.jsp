@@ -6,9 +6,15 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+<%
+response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+%>
 <body>
 
+<%
 
+	
+%>>
 	<form action="Login" method="post">
 		First Name:<input type="text" name="firstname" placeholder="firstname"
 			required> Email:<input type="email" name="email"

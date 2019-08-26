@@ -2,6 +2,7 @@ package com.bridgelabz.controller;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -33,17 +34,23 @@ public class LoginController extends HttpServlet {
 			request.getSession().invalidate();
 			HttpSession newsession = request.getSession();
 			newsession.setAttribute("email", email);
-	
+
 			newsession.setMaxInactiveInterval(20);
 			System.out.println("in login page");
-			Cookie cookiesemail=new Cookie("email",email);
-			Cookie cookiesname=new Cookie("firstname",firstname);
+			Cookie cookiesemail = new Cookie("email", email);
+			Cookie cookiesname = new Cookie("firstname", firstname);
 			response.addCookie(cookiesemail);
 			response.addCookie(cookiesname);
-            
-			response.sendRedirect("Filterworing.jsp");
-		} else
-			response.sendRedirect("Error.jsp");
+
+			//RequestDispatcher rd = request.getRequestDispatcher("Filterworing.jsp");
+			//rd.forward(request, response);
+			 response.sendRedirect("Filterworing.jsp");
+		} else {
+			RequestDispatcher rd = request.getRequestDispatcher("Error.jsp");
+			rd.forward(request, response);
+		}
+
+		// response.sendRedirect("Error.jsp");
 
 	}
 }

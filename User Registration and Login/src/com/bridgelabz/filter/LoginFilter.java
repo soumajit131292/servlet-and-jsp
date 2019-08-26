@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -30,7 +31,9 @@ public class LoginFilter implements Filter {
 		HttpServletRequest req = (HttpServletRequest) request;
 		if (req.getSession().getAttribute("email") == null) {
 
-			res.sendRedirect("Login.jsp");
+			RequestDispatcher rd=request.getRequestDispatcher("Login.jsp");
+			rd.forward(request, response);
+			//res.sendRedirect("Login.jsp");
 
 		} else
 			chain.doFilter(req, res);

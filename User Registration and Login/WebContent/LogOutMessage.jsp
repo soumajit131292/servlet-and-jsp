@@ -11,14 +11,6 @@ response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
 %>
 <body>
 
-<% 
-if(request.getSession().getAttribute("email")==null)
-{
-	response.sendRedirect("Login.jsp");
-}
 
-%>
-filter is working.
-<a href="Welcome.jsp">click here to go welcome page</a>
 </body>
 </html>
